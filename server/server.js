@@ -12,6 +12,5 @@ app.use(express.static('client'))
     .use(bodyParser.urlencoded({ extended: true }))
     .use('/', thoughtRouter)
     
-app.listen(process.env.PORT || port, 'localhost', () => {
-    console.log('App listening on port: ', port)
-})
+app.listen(process.env.PORT || port);
+console.log('listening to server');
