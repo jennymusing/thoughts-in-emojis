@@ -12,16 +12,6 @@ class Thoughts extends React.Component {
 		this.handleGather = this.handleGather.bind(this)
 	}
 
-	render() {
-		return (
-			<div>			
-				{this.state.thoughts.map((thought, i) => {
-					return <div key={i}><Thought thought={thought}/></div>
-				})}
-			</div>
-		)
-	}
-
 	componentDidMount() {
 		this.handleGather()
 	}
@@ -39,6 +29,16 @@ class Thoughts extends React.Component {
 			})
 	}
 
+	render() {
+		return (
+			<div>			
+				{this.state.thoughts.map((thought, i) => {
+					return <div key={i}><Thought thought={thought}/></div>
+				})}
+			</div>
+		)
+	}
+	
 }
 
 export default Thoughts
